@@ -1,0 +1,35 @@
+ <div class="user-list">
+      <div class="header">
+        <h2>User Management</h2>
+        <div class="controls">
+          <button (click)="toggleDebug()" 
+                  [class.active]="showDebug">
+            {{ showDebug ? 'Hide Debug' : 'Show Debug' }}
+          </button>
+          <button (click)="addRandomUser()" class="btn-add">
+            Add User
+          </button>
+        </div>
+      </div>
+      
+      <div class="stats">
+        <span>Total: {{ users.length }}</span>
+        <span>Selected: {{ selectedCount }}</span>
+        <span>Active: {{ activeCount }}</span>
+      </div>
+      
+      <div class="users-container">
+        <app-user-card 
+          *ngFor="let user of users" 
+          [user]="user"
+          [showDebug]="showDebug"
+          (selected)="onUserSelected($event)"
+          (roleChange)="onRoleChange($event)">
+        </app-user-card>
+      </div>
+      
+      <div *ngIf="showDebug" class="debug-panel">
+        <h4>Debug Information</h4>
+        <pre>{{ debugInfo | json }}</pre>
+      </div>
+    </div>

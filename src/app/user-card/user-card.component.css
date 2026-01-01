@@ -1,0 +1,64 @@
+.user-card {
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+    .selected {
+      border-color: #2196F3;
+      background-color: #E3F2FD;
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.2);
+    }
+    .inactive {
+      opacity: 0.6;
+      border-style: dashed;
+    }
+    .user-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .badge {
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .badge-admin { background: #FF5252; color: white; }
+    .badge-moderator { background: #FF9800; color: white; }
+    .badge-user { background: #4CAF50; color: white; }
+    .email {
+      color: #666;
+      margin-bottom: 12px;
+    }
+    .user-actions {
+      display: flex;
+      gap: 8px;
+    }
+    button {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      opacity: 0.9;
+    }
+    .btn-selected {
+      background: #2196F3;
+      color: white;
+    }
+    .btn-role {
+      background: #9C27B0;
+      color: white;
+    }
+    .debug-info {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed #ddd;
+      color: #888;
+    }
